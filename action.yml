@@ -44,6 +44,11 @@ inputs:
       Default: indigo
     required: false
     default: indigo
+  site_url:
+    description: >
+      used as site_url in mkdocs.yml
+    required: false
+    default: ""
 runs:
   using: 'docker'
   image: 'docker://deloo/markdown-docs'
@@ -52,6 +57,7 @@ runs:
     ICON: ${{ inputs.icon }}
     PRIMARY_COLOR: ${{ inputs.primary-color }}
     SECONDARY_COLOR: ${{ inputs.secondary-color }}
+    SITE_URL: ${{ inputs.site_url }}
   args:
     - ${{ inputs.src }}
     - ${{ inputs.dst }}
