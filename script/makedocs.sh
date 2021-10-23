@@ -29,7 +29,7 @@ RELATIVE_DST=${RELATIVE_DST%/}
 DST=${WORKSPACE%/}/${RELATIVE_DST}
 # Temp files
 TMP_DST=/tmp/makedocs
-echo "Source: ${SRC}; Destination: ${DST};"
+echo "Source: ${SRC}; Destination: ${DST}; site_url: ${SITE_URL}"
 # MkDocs default config
 if [ ! -z "${ICON}" ] ; then
     export ICON=material/${ICON##*/}
